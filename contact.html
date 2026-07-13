@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réservation — La Salle de L'Escapade · Besançon</title>
+  <meta name="description" content="Consultez les disponibilités et réservez la Salle de L'Escapade à Besançon pour votre événement privé ou professionnel." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__container">
+
+      <a href="index.html" class="navbar__logo" aria-label="La Salle de L'Escapade — Retour à l'accueil">
+        <img src="img/esco_snack_logo_v5.png" alt="" class="navbar__logo-img" />
+        <span class="navbar__logo-wordmark">
+          La Salle
+          <em>de L'Escapade</em>
+        </span>
+      </a>
+
+      <nav id="navbar-nav" class="navbar__nav" role="navigation" aria-label="Navigation principale">
+        <ul class="navbar__list">
+          <li><a href="index.html"    class="navbar__link">Accueil</a></li>
+          <li><a href="salle.html"    class="navbar__link">La Salle</a></li>
+          <li><a href="formules.html" class="navbar__link">Nos Formules</a></li>
+          <li><a href="contact.html"  class="navbar__link navbar__link--active" aria-current="page">Réserver</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="navbar-burger"
+        class="navbar__burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="navbar-nav"
+        type="button"
+      >
+        <span class="navbar__burger-bar"></span>
+        <span class="navbar__burger-bar"></span>
+        <span class="navbar__burger-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── EN-TÊTE ───────────────────────────────────────────── -->
+    <div class="page-header" style="
+      padding: calc(var(--navbar-height) + var(--space-xl)) var(--space-md) var(--space-xl);
+      background: linear-gradient(160deg, #2a1e1b 0%, var(--color-bg-dark) 50%, var(--color-bg) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    ">
+      <span style="
+        display: inline-flex; align-items: center; gap: 0.75rem;
+        font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.22em;
+        text-transform: uppercase; color: var(--color-accent); margin-bottom: 1.25rem;
+      ">
+        <span style="display:inline-block;width:28px;height:1px;background:var(--color-accent)"></span>
+        Disponibilités &amp; demande
+      </span>
+      <h1 style="
+        font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.25rem);
+        font-weight: 700; color: var(--color-cream); line-height: 1.1; margin-bottom: 1rem;
+      ">Contact &amp; Réservation</h1>
+      <p style="
+        font-size: 1.0625rem; color: rgba(245,240,236,0.72); font-weight: 300;
+        max-width: 52ch; margin: 0 auto; line-height: 1.75;
+      ">
+        Sélectionnez une date disponible sur le calendrier, remplissez le formulaire
+        et recevez notre confirmation sous 24 heures.
+      </p>
+    </div>
+
+    <!-- ── CALENDRIER + FORMULAIRE ───────────────────────────── -->
+    <section class="booking" aria-labelledby="booking-section-title">
+      <h2 class="sr-only" id="booking-section-title">Réservation</h2>
+
+      <div class="booking__container">
+
+        <!-- ── COLONNE CALENDRIER ── -->
+        <div class="calendar-col">
+          <div class="calendar-col__intro">
+            <h2>Disponibilités</h2>
+            <p>Cliquez sur une date libre pour la sélectionner. Elle sera automatiquement reportée dans le formulaire.</p>
+          </div>
+
+          <div class="calendar" role="application" aria-label="Calendrier des disponibilités">
+
+            <!-- Navigation mois -->
+            <div class="calendar__nav">
+              <button
+                id="cal-prev"
+                class="calendar__nav-btn"
+                type="button"
+                aria-label="Mois précédent"
+              >
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="13 4 7 10 13 16"/></svg>
+              </button>
+              <span id="calendar-month-label" class="calendar__month-label" aria-live="polite" aria-atomic="true">
+                Chargement…
+              </span>
+              <button
+                id="cal-next"
+                class="calendar__nav-btn"
+                type="button"
+                aria-label="Mois suivant"
+              >
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="7 4 13 10 7 16"/></svg>
+              </button>
+            </div>
+
+            <!-- En-têtes jours de la semaine -->
+            <div class="calendar__weekdays" aria-hidden="true">
+              <div class="calendar__weekday">L</div>
+              <div class="calendar__weekday">M</div>
+              <div class="calendar__weekday">M</div>
+              <div class="calendar__weekday">J</div>
+              <div class="calendar__weekday">V</div>
+              <div class="calendar__weekday calendar__weekday--weekend">S</div>
+              <div class="calendar__weekday calendar__weekday--weekend">D</div>
+            </div>
+
+            <!-- Grille des jours — remplie par JS -->
+            <div
+              id="calendar-grid"
+              class="calendar__grid"
+              role="grid"
+              aria-label="Jours du mois"
+            ></div>
+
+            <!-- Info date sélectionnée -->
+            <div
+              id="calendar-selection-info"
+              class="calendar__selection-info"
+              aria-live="polite"
+            >
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="14" height="14" rx="2"/><path d="M3 9h14M8 2v4M12 2v4"/></svg>
+              <span id="calendar-selection-text"></span>
+            </div>
+
+            <!-- Légende -->
+            <div class="calendar__legend" aria-label="Légende du calendrier">
+              <div class="legend-item">
+                <span class="legend-dot legend-dot--available" aria-hidden="true"></span>
+                Disponible
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot legend-dot--reserved" aria-hidden="true"></span>
+                Réservé
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot legend-dot--selected" aria-hidden="true"></span>
+                Sélectionné
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot legend-dot--today" aria-hidden="true"></span>
+                Aujourd'hui
+              </div>
+            </div>
+
+          </div>
+          <!-- /calendar -->
+
+        </div>
+        <!-- /calendar-col -->
+
+        <!-- ── COLONNE FORMULAIRE ── -->
+        <div class="form-col">
+          <h2 class="form-col__title">Votre demande</h2>
+          <p class="form-col__sub">
+            Tous les champs marqués <span style="color:var(--color-accent);font-weight:700">*</span> sont obligatoires.
+            Nous revenons vers vous sous 24h pour confirmer votre réservation.
+          </p>
+
+          <!-- Formulaire principal -->
+          <form id="booking-form" class="booking-form" novalidate aria-label="Formulaire de réservation">
+
+            <!-- Prénom + Nom -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="field-prenom">Prénom <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  id="field-prenom"
+                  class="form-input"
+                  type="text"
+                  autocomplete="given-name"
+                  placeholder="Marie"
+                  aria-required="true"
+                  aria-describedby="error-prenom"
+                />
+                <span id="error-prenom" class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-nom">Nom <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  id="field-nom"
+                  class="form-input"
+                  type="text"
+                  autocomplete="family-name"
+                  placeholder="Dupont"
+                  aria-required="true"
+                  aria-describedby="error-nom"
+                />
+                <span id="error-nom" class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Email + Téléphone -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="field-email">Email <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  id="field-email"
+                  class="form-input"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="marie@exemple.fr"
+                  aria-required="true"
+                  aria-describedby="error-email"
+                />
+                <span id="error-email" class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-tel">Téléphone</label>
+                <input
+                  id="field-tel"
+                  class="form-input"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="06 12 34 56 78"
+                  aria-describedby="error-tel"
+                />
+                <span id="error-tel" class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Type d'événement -->
+            <div class="form-group">
+              <label class="form-label" for="field-event-type">
+                Type d'événement <span class="required" aria-hidden="true">*</span>
+              </label>
+              <div class="form-select-wrap">
+                <select
+                  id="field-event-type"
+                  class="form-select"
+                  aria-required="true"
+                  aria-describedby="error-event-type"
+                >
+                  <option value="">— Sélectionnez un type —</option>
+                  <option value="repas-famille">Repas de famille (anniversaire, communion…)</option>
+                  <option value="mariage">Mariage / Cérémonie</option>
+                  <option value="seminaire">Séminaire d'entreprise</option>
+                  <option value="formation">Journée de formation</option>
+                  <option value="cocktail">Cocktail / Vin d'honneur</option>
+                  <option value="autre">Autre événement</option>
+                </select>
+              </div>
+              <span id="error-event-type" class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Date + Nombre de personnes -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="field-date">
+                  Date souhaitée <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="field-date"
+                  class="form-input form-input--date"
+                  type="date"
+                  aria-required="true"
+                  aria-describedby="error-date"
+                />
+                <span id="error-date" class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-guests">
+                  Nombre de personnes <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="field-guests"
+                  class="form-input"
+                  type="number"
+                  min="1"
+                  max="120"
+                  placeholder="Ex : 50"
+                  aria-required="true"
+                  aria-describedby="error-guests"
+                />
+                <span id="error-guests" class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Formule souhaitée -->
+            <div class="form-group">
+              <fieldset style="border:none;padding:0;margin:0">
+                <legend class="form-label" style="float:left;width:100%;margin-bottom:0.625rem">
+                  Formule souhaitée <span class="required" aria-hidden="true">*</span>
+                </legend>
+                <div class="form-radios" style="clear:both">
+
+                  <div class="radio-option">
+                    <input
+                      type="radio"
+                      id="radio-demi"
+                      name="formule"
+                      value="demi-journee"
+                    />
+                    <label class="form-radio-label" for="radio-demi">
+                      <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 3"/></svg>
+                      Demi-journée (4h)
+                    </label>
+                  </div>
+
+                  <div class="radio-option">
+                    <input
+                      type="radio"
+                      id="radio-journee"
+                      name="formule"
+                      value="journee"
+                    />
+                    <label class="form-radio-label" for="radio-journee">
+                      <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 4v6l4 2"/></svg>
+                      Journée complète (8h)
+                    </label>
+                  </div>
+
+                  <div class="radio-option">
+                    <input
+                      type="radio"
+                      id="radio-prestige"
+                      name="formule"
+                      value="prestige"
+                    />
+                    <label class="form-radio-label" for="radio-prestige">
+                      <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><polygon points="10 2 12.5 7.5 18.5 8 14 12 15.5 18 10 15 4.5 18 6 12 1.5 8 7.5 7.5"/></svg>
+                      Forfait Prestige
+                    </label>
+                  </div>
+
+                  <div class="radio-option">
+                    <input
+                      type="radio"
+                      id="radio-nc"
+                      name="formule"
+                      value="non-defini"
+                    />
+                    <label class="form-radio-label" for="radio-nc">
+                      <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 14v1M10 6a2.5 2.5 0 0 1 1.5 4.5C10.5 11 10 12 10 13"/></svg>
+                      Pas encore décidé(e)
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+              <span id="error-formule" class="form-error" role="alert" aria-live="polite" style="margin-top:0.5rem"></span>
+            </div>
+
+            <!-- Message libre -->
+            <div class="form-group">
+              <label class="form-label" for="field-message">Message (précisions, questions…)</label>
+              <textarea
+                id="field-message"
+                class="form-textarea"
+                rows="4"
+                placeholder="Décrivez votre événement, vos besoins spécifiques, vos questions…"
+                aria-describedby="message-hint"
+              ></textarea>
+              <span id="message-hint" class="form-error" style="display:block;opacity:0.6;font-size:0.75rem;margin-top:0.25rem;color:var(--color-bg-dark)">
+                Facultatif — toute information utile est la bienvenue.
+              </span>
+            </div>
+
+            <div class="form-separator"></div>
+
+            <!-- RGPD -->
+            <div class="form-group">
+              <div class="form-checkbox-wrap" id="field-rgpd-wrap">
+                <input
+                  type="checkbox"
+                  id="field-rgpd"
+                  class="form-checkbox"
+                  aria-required="true"
+                  aria-describedby="error-rgpd"
+                />
+                <label class="form-checkbox-label" for="field-rgpd">
+                  J'accepte que mes données soient utilisées pour traiter ma demande de réservation,
+                  conformément à notre <a href="#">politique de confidentialité</a>.
+                  Elles ne seront jamais transmises à des tiers. <strong>*</strong>
+                </label>
+              </div>
+              <span id="error-rgpd" class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Soumission -->
+            <div class="form-submit-wrap">
+              <p class="form-submit-note">
+                Réponse sous 24h · Devis gratuit et sans engagement
+              </p>
+              <button type="submit" class="btn btn--accent" style="min-width: 220px;">
+                Envoyer ma demande
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="margin-left:0.5rem"><line x1="3" y1="10" x2="17" y2="10"/><polyline points="11 4 17 10 11 16"/></svg>
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Message de confirmation (affiché après envoi) -->
+          <div id="booking-confirmation" class="booking-confirmation" role="status" aria-live="polite">
+            <div class="booking-confirmation__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3 class="booking-confirmation__title">Demande envoyée, merci !</h3>
+              <p class="booking-confirmation__text">
+                Bonjour <strong id="conf-prenom"></strong>,<br />
+                Nous avons bien reçu votre demande pour le <strong id="conf-date"></strong>.
+                Notre équipe vous recontacte sous <strong>24 heures</strong> pour confirmer
+                la disponibilité et vous transmettre un devis personnalisé.
+              </p>
+              <p class="booking-confirmation__text" style="margin-top:0.75rem; opacity:0.75; font-size:0.875rem">
+                En attendant, n'hésitez pas à nous appeler au
+                <a href="tel:+33374657890" style="color:var(--color-accent);font-weight:700">03 74 65 78 90</a>
+                du lundi au vendredi, de 9h à 19h.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- /form-col -->
+
+      </div>
+    </section>
+
+    <!-- ── INFORMATIONS DE CONTACT ───────────────────────────── -->
+    <section class="contact-info" aria-labelledby="contact-info-title">
+      <div class="contact-info__container">
+        <h2 class="sr-only" id="contact-info-title">Informations de contact</h2>
+
+        <div class="contact-card">
+          <div class="contact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <p class="contact-card__title">Téléphone</p>
+          <div class="contact-card__content">
+            <a href="tel:+33374657890">03 74 65 78 90</a><br />
+            Lun – Ven : 9h – 19h<br />
+            Sam – Dim : 8h – 22h
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <p class="contact-card__title">Email</p>
+          <div class="contact-card__content">
+            <a href="mailto:contact@salle-escapade.fr">contact@salle-escapade.fr</a><br />
+            Réponse sous 24h ouvrées
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <p class="contact-card__title">Adresse</p>
+          <div class="contact-card__content">
+            22B rue de l'Épitaphe<br />
+            25000 Besançon<br />
+            <a
+              href="https://maps.google.com/maps?q=22B+rue+de+l%27%C3%89pitaphe+25000+Besan%C3%A7on"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Voir sur Google Maps →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo" aria-label="La Salle de L'Escapade — Accueil">
+          <img src="img/esco_snack_logo_v5.png" alt="" class="navbar__logo-img" style="height:32px" />
+          <span class="footer__logo-wordmark">
+            La Salle
+            <em>de L'Escapade</em>
+          </span>
+        </a>
+        <p class="footer__tagline">
+          Un espace de réception chaleureux et élégant pour tous vos événements
+          privés et professionnels, en plein cœur de Besançon.
+        </p>
+        <address class="footer__address">
+          <p>22B rue de l'Épitaphe<br />25000 Besançon, Bourgogne-Franche-Comté</p>
+          <p><a href="tel:+33374657890" class="footer__link">03 74 65 78 90</a></p>
+          <p><a href="mailto:contact@salle-escapade.fr" class="footer__link">contact@salle-escapade.fr</a></p>
+        </address>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Navigation</h3>
+        <nav aria-label="Liens rapides du pied de page">
+          <ul class="footer__nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="salle.html">La Salle</a></li>
+            <li><a href="formules.html">Nos Formules</a></li>
+            <li><a href="contact.html">Contact &amp; Réservation</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Suivez-nous</h3>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Page Facebook de La Salle de L'Escapade">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Page Instagram de La Salle de L'Escapade">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Page LinkedIn de La Salle de L'Escapade">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="footer__hours">
+          <strong>Horaires d'accueil</strong>
+          Lundi – Vendredi : 9h – 19h<br />
+          Samedi – Dimanche : 8h – 22h
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2025 La Salle de L'Escapade. Tous droits réservés.</span>
+      <a href="#" class="footer__link">Mentions légales</a>
+      <a href="#" class="footer__link">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+  <script defer src="js/global.js"></script>
+  <script defer src="js/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Formules — La Salle de L'Escapade · Besançon</title>
+  <meta name="description" content="Découvrez nos formules de location : demi-journée, journée complète et forfait prestige. Tableau comparatif, options à la carte et FAQ." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/formules.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__container">
+
+      <a href="index.html" class="navbar__logo" aria-label="La Salle de L'Escapade — Retour à l'accueil">
+        <img src="img/esco_snack_logo_v5.png" alt="" class="navbar__logo-img" />
+        <span class="navbar__logo-wordmark">
+          La Salle
+          <em>de L'Escapade</em>
+        </span>
+      </a>
+
+      <nav id="navbar-nav" class="navbar__nav" role="navigation" aria-label="Navigation principale">
+        <ul class="navbar__list">
+          <li><a href="index.html"    class="navbar__link">Accueil</a></li>
+          <li><a href="salle.html"    class="navbar__link">La Salle</a></li>
+          <li><a href="formules.html" class="navbar__link navbar__link--active" aria-current="page">Nos Formules</a></li>
+          <li><a href="contact.html"  class="navbar__link navbar__link--cta">Réserver</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="navbar-burger"
+        class="navbar__burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="navbar-nav"
+        type="button"
+      >
+        <span class="navbar__burger-bar"></span>
+        <span class="navbar__burger-bar"></span>
+        <span class="navbar__burger-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── EN-TÊTE DE PAGE ───────────────────────────────────── -->
+    <div class="page-header">
+      <span class="page-header__eyebrow">Transparence &amp; simplicité</span>
+      <h1 class="page-header__title">Nos Formules</h1>
+      <p class="page-header__sub">
+        Trois offres claires, pensées pour s'adapter à votre budget et à votre événement.
+        Et si aucune ne vous convient parfaitement, nous créons la vôtre.
+      </p>
+    </div>
+
+    <!-- ── INTRO ─────────────────────────────────────────────── -->
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro__container">
+        <h2 class="intro__title" id="intro-title">
+          Clé en main ou <em>entièrement sur-mesure</em>
+        </h2>
+        <p class="intro__text">
+          Nos formules ont été conçues pour simplifier votre organisation. Chaque offre inclut
+          l'essentiel pour que votre événement se déroule sans friction : la salle, le mobilier,
+          les équipements techniques et l'accès aux espaces communs.
+        </p>
+        <p class="intro__text">
+          Vous pouvez enrichir n'importe quelle formule avec nos <strong>options à la carte</strong> :
+          traiteur partenaire, décoration personnalisée, coordination sur place. Nous nous adaptons
+          à votre vision, pas l'inverse.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CARTES DE FORMULES ────────────────────────────────── -->
+    <section class="pricing" aria-labelledby="pricing-title">
+      <div class="pricing__container">
+
+        <header class="pricing__header">
+          <span class="section-eyebrow">Tarifs clairs</span>
+          <h2 class="section-title" id="pricing-title">Choisissez votre formule</h2>
+          <p class="section-subtitle">Tous les tarifs sont TTC. Devis gratuit sous 24h.</p>
+        </header>
+
+        <div class="pricing__grid">
+
+          <!-- Formule Demi-journée -->
+          <article class="pricing-card" aria-labelledby="plan-demi">
+            <div class="pricing-card__header">
+              <span class="pricing-card__duration">4 heures</span>
+              <h3 class="pricing-card__name" id="plan-demi">Demi-journée</h3>
+              <div class="pricing-card__price-wrap">
+                <span class="pricing-card__price">390 €</span>
+                <span class="pricing-card__price-suffix">TTC<br />à partir de</span>
+              </div>
+              <p class="pricing-card__target">Idéal pour réunions, ateliers, formations courtes</p>
+            </div>
+
+            <div class="pricing-card__includes">
+              <span class="pricing-card__includes-label">Inclus</span>
+              <ul class="pricing-card__list">
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Location de la salle (280 m²)
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Tables, chaises et nappage blanc
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Vidéoprojecteur &amp; écran
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Système audio &amp; WiFi haut débit
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Parking gratuit &amp; accès terrasse
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Ménage inclus après événement
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card__cta">
+              <a href="contact.html?formule=demi-journee" class="btn btn--primary">Demander un devis</a>
+            </div>
+          </article>
+
+          <!-- Formule Journée complète — MISE EN AVANT -->
+          <article class="pricing-card pricing-card--featured" aria-labelledby="plan-journee">
+            <div class="pricing-card__badge">Le plus choisi</div>
+            <div class="pricing-card__header">
+              <span class="pricing-card__duration">8 heures</span>
+              <h3 class="pricing-card__name" id="plan-journee">Journée complète</h3>
+              <div class="pricing-card__price-wrap">
+                <span class="pricing-card__price">690 €</span>
+                <span class="pricing-card__price-suffix">TTC<br />à partir de</span>
+              </div>
+              <p class="pricing-card__target">Séminaires, banquets, journées de formation</p>
+            </div>
+
+            <div class="pricing-card__includes">
+              <span class="pricing-card__includes-label">Tout de la demi-journée, plus :</span>
+              <ul class="pricing-card__list">
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Accès cuisine &amp; office équipés
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Coordination sur place (1h)
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Éclairage modulable inclus
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Tableau blanc &amp; paperboard
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Accès vestiaire sécurisé
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card__cta">
+              <a href="contact.html?formule=journee" class="btn btn--accent">Demander un devis</a>
+            </div>
+          </article>
+
+          <!-- Formule Prestige -->
+          <article class="pricing-card" aria-labelledby="plan-prestige">
+            <div class="pricing-card__header">
+              <span class="pricing-card__duration">Week-end / événement spécial</span>
+              <h3 class="pricing-card__name" id="plan-prestige">Forfait Prestige</h3>
+              <div class="pricing-card__price-wrap">
+                <span class="pricing-card__price" style="font-size: 1.875rem;">Sur devis</span>
+              </div>
+              <p class="pricing-card__target">Mariages, galas, événements d'entreprise premium</p>
+            </div>
+
+            <div class="pricing-card__includes">
+              <span class="pricing-card__includes-label">Tout de la journée, plus :</span>
+              <ul class="pricing-card__list">
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Mise en place personnalisée
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Décoration de base offerte
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Bouquet d'accueil &amp; signalétique
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Coordinateur dédié toute la durée
+                </li>
+                <li class="pricing-card__item">
+                  <span class="pricing-card__item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  Visite de repérage incluse
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card__cta">
+              <a href="contact.html?formule=prestige" class="btn btn--primary">Nous contacter</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TABLEAU COMPARATIF ────────────────────────────────── -->
+    <section class="comparison" aria-labelledby="compare-title">
+      <div class="comparison__container">
+
+        <header class="comparison__header">
+          <span class="section-eyebrow">En un coup d'œil</span>
+          <h2 class="section-title" id="compare-title">Comparatif des formules</h2>
+        </header>
+
+        <div class="comparison__scroll" role="region" aria-label="Tableau comparatif des formules" tabindex="0">
+          <table class="comparison__table">
+            <thead>
+              <tr>
+                <th scope="col">Service</th>
+                <th scope="col">Demi-journée</th>
+                <th scope="col" class="col--featured">Journée complète</th>
+                <th scope="col">Prestige</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr class="category-row">
+                <td colspan="4">Espaces &amp; équipements</td>
+              </tr>
+              <tr>
+                <td>Location salle 280 m²</td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Terrasse &amp; jardin (80 m²)</td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Cuisine &amp; office</td>
+                <td><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Vestiaire sécurisé</td>
+                <td><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+
+              <tr class="category-row">
+                <td colspan="4">Technique &amp; mobilier</td>
+              </tr>
+              <tr>
+                <td>Tables, chaises, nappage</td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Vidéoprojecteur &amp; sono</td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>WiFi &amp; parking</td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Éclairage modulable</td>
+                <td><span class="tag-option">En option</span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Tableau blanc &amp; paperboard</td>
+                <td><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+
+              <tr class="category-row">
+                <td colspan="4">Services &amp; accompagnement</td>
+              </tr>
+              <tr>
+                <td>Ménage après événement</td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Coordination sur place</td>
+                <td><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td class="col--featured"><span class="check" aria-label="1h incluse"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+                <td><span class="check" aria-label="Journée complète incluse"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Mise en place personnalisée</td>
+                <td><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td class="col--featured"><span class="tag-option">En option</span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Décoration de base</td>
+                <td><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td class="col--featured"><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+              <tr>
+                <td>Visite de repérage</td>
+                <td><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td class="col--featured"><span class="cross" aria-label="Non inclus"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/></svg></span></td>
+                <td><span class="check" aria-label="Inclus"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="4 10 8 14 16 6"/></svg></span></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── OPTIONS À LA CARTE ────────────────────────────────── -->
+    <section class="options" aria-labelledby="options-title">
+      <div class="options__container">
+
+        <header class="options__header">
+          <span class="section-eyebrow">Personnalisez votre événement</span>
+          <h2 class="section-title" id="options-title">Options à la carte</h2>
+          <p class="section-subtitle">Ajoutez ces services à n'importe quelle formule selon vos besoins.</p>
+        </header>
+
+        <div class="options__grid">
+
+          <div class="option-card">
+            <div class="option-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            </div>
+            <p class="option-card__name">Traiteur partenaire</p>
+            <p class="option-card__desc">Mise en relation avec nos traiteurs partenaires sélectionnés pour leur qualité. Cocktail, buffet ou repas assis.</p>
+            <p class="option-card__price">Sur devis traiteur</p>
+          </div>
+
+          <div class="option-card">
+            <div class="option-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 4.5-5 11-7 13C10 20 5 16.5 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <p class="option-card__name">Décoration sur-mesure</p>
+            <p class="option-card__desc">Fleurs, centres de table, ballons, signalétique personnalisée. Nous nous coordonnons avec votre décorateur ou le nôtre.</p>
+            <p class="option-card__price">À partir de 150 €</p>
+          </div>
+
+          <div class="option-card">
+            <div class="option-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <p class="option-card__name">Matériel AV supplémentaire</p>
+            <p class="option-card__desc">Deuxième écran, micro HF, streaming live, enregistrement vidéo de votre événement en HD.</p>
+            <p class="option-card__price">À partir de 80 €</p>
+          </div>
+
+          <div class="option-card">
+            <div class="option-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <p class="option-card__name">Personnel de service</p>
+            <p class="option-card__desc">Serveurs, barman, hôte(sse) d'accueil. Mise à disposition de personnel qualifié à l'heure ou à la demi-journée.</p>
+            <p class="option-card__price">À partir de 25 € / h</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ───────────────────────────────────────────────── -->
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="faq__container">
+
+        <header class="faq__header">
+          <span class="section-eyebrow">Questions fréquentes</span>
+          <h2 class="section-title" id="faq-title">Vous avez des questions ?</h2>
+          <p class="section-subtitle" style="margin: 0 auto; text-align: center;">
+            Nous avons les réponses. Et si la vôtre n'est pas là, <a href="contact.html" style="color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px;">contactez-nous</a>.
+          </p>
+        </header>
+
+        <div class="faq__list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" type="button" aria-controls="faq-answer-1" id="faq-btn-1">
+              Comment se déroule la réservation ?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 14 14" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1">
+              <div class="faq-answer__inner">
+                <p>La réservation se fait en <strong>3 étapes simples</strong> : vous remplissez le formulaire de contact ou nous appelez, nous vous envoyons un devis personnalisé sous 24h, puis vous validez avec un acompte de 30 % pour bloquer la date.</p>
+                <p>Une fois la réservation confirmée, nous planifions ensemble une visite de la salle et un rendez-vous de préparation environ 2 semaines avant votre événement.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" type="button" aria-controls="faq-answer-2" id="faq-btn-2">
+              Peut-on visiter la salle avant de réserver ?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 14 14" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2">
+              <div class="faq-answer__inner">
+                <p>Absolument — et nous vous y encourageons ! Les visites se font sur rendez-vous, du lundi au samedi entre 9h et 18h. Comptez environ 30 minutes pour découvrir la salle, la terrasse, la cuisine et poser toutes vos questions.</p>
+                <p>Pour les formules Prestige, une <strong>visite de repérage dédiée</strong> est incluse dans le forfait.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" type="button" aria-controls="faq-answer-3" id="faq-btn-3">
+              Quelles sont les conditions d'annulation ?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 14 14" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3">
+              <div class="faq-answer__inner">
+                <p><strong>Plus de 30 jours avant</strong> : acompte intégralement remboursé.<br />
+                <strong>Entre 15 et 30 jours</strong> : 50 % de l'acompte retenu.<br />
+                <strong>Moins de 15 jours</strong> : acompte non remboursable.</p>
+                <p>En cas de report (et non d'annulation), nous faisons tout notre possible pour trouver une date de remplacement sans frais supplémentaires.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" type="button" aria-controls="faq-answer-4" id="faq-btn-4">
+              Le traiteur est-il imposé ?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 14 14" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4">
+              <div class="faq-answer__inner">
+                <p>Non, le traiteur est entièrement libre. Vous pouvez faire appel à votre propre prestataire ou vous faire épauler par nos <strong>traiteurs partenaires</strong>, que nous vous recommandons pour leur sérieux et la qualité de leurs prestations à Besançon.</p>
+                <p>La cuisine équipée est accessible dès la formule Journée complète pour faciliter l'installation de votre traiteur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" type="button" aria-controls="faq-answer-5" id="faq-btn-5">
+              La salle est-elle accessible aux personnes à mobilité réduite ?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 14 14" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5">
+              <div class="faq-answer__inner">
+                <p>Oui, la salle est entièrement accessible PMR. L'entrée est de plain-pied, les couloirs sont dimensionnés pour les fauteuils roulants, et des <strong>sanitaires adaptés</strong> sont disponibles sur place.</p>
+                <p>Le parking dispose d'emplacements réservés à proximité immédiate de l'entrée principale.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA FINAL ─────────────────────────────────────────── -->
+    <section class="formules-cta" aria-labelledby="formules-cta-title">
+      <div class="formules-cta__container">
+        <h2 class="formules-cta__title" id="formules-cta-title">
+          Prêt à organiser votre événement ?
+        </h2>
+        <p class="formules-cta__sub">
+          Remplissez notre formulaire en 2 minutes et recevez un devis personnalisé sous 24h.
+          Nous sommes disponibles du lundi au samedi pour répondre à vos questions.
+        </p>
+        <div class="formules-cta__actions">
+          <a href="contact.html" class="btn btn--accent">Demander un devis gratuit</a>
+          <a href="salle.html"   class="btn btn--ghost">Voir la salle</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo" aria-label="La Salle de L'Escapade — Accueil">
+          <img src="img/esco_snack_logo_v5.png" alt="" class="navbar__logo-img" style="height:32px" />
+          <span class="footer__logo-wordmark">
+            La Salle
+            <em>de L'Escapade</em>
+          </span>
+        </a>
+        <p class="footer__tagline">
+          Un espace de réception chaleureux et élégant pour tous vos événements
+          privés et professionnels, en plein cœur de Besançon.
+        </p>
+        <address class="footer__address">
+          <p>22B rue de l'Épitaphe<br />25000 Besançon, Bourgogne-Franche-Comté</p>
+          <p><a href="tel:+33374657890" class="footer__link">03 74 65 78 90</a></p>
+          <p><a href="mailto:contact@salle-escapade.fr" class="footer__link">contact@salle-escapade.fr</a></p>
+        </address>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Navigation</h3>
+        <nav aria-label="Liens rapides du pied de page">
+          <ul class="footer__nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="salle.html">La Salle</a></li>
+            <li><a href="formules.html">Nos Formules</a></li>
+            <li><a href="contact.html">Contact &amp; Réservation</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Suivez-nous</h3>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Page Facebook de La Salle de L'Escapade">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Page Instagram de La Salle de L'Escapade">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Page LinkedIn de La Salle de L'Escapade">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="footer__hours">
+          <strong>Horaires d'accueil</strong>
+          Lundi – Vendredi : 9h – 19h<br />
+          Samedi – Dimanche : 8h – 22h
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2025 La Salle de L'Escapade. Tous droits réservés.</span>
+      <a href="#" class="footer__link">Mentions légales</a>
+      <a href="#" class="footer__link">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+  <script defer src="js/global.js"></script>
+  <script defer src="js/formules.js"></script>
+
+</body>
+</html>
