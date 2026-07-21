@@ -243,7 +243,7 @@
     var guests = parseInt(getValue('guests'), 10);
     if (!getValue('guests'))     { showError('guests', 'Veuillez indiquer le nombre de personnes.'); valid = false; }
     else if (isNaN(guests) || guests < 1) { showError('guests', 'Le nombre de personnes doit être au moins 1.'); valid = false; }
-    else if (guests > 120)       { showError('guests', 'Notre salle accueille au maximum 120 personnes.'); valid = false; }
+    else if (guests > 60)       { showError('guests', 'Notre salle accueille au maximum 60 personnes.'); valid = false; }
 
     if (!getRadioValue('formule')) { showError('formule', 'Veuillez choisir une formule.'); valid = false; }
     if (!isChecked('rgpd'))        { showError('rgpd',    'Vous devez accepter la politique de confidentialité.'); valid = false; }

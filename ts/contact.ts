@@ -323,8 +323,8 @@
     } else if (isNaN(guests) || guests < 1) {
       showError('guests', 'Le nombre de personnes doit être au moins 1.');
       valid = false;
-    } else if (guests > 120) {
-      showError('guests', 'Notre salle accueille au maximum 120 personnes.');
+    } else if (guests > 60) {
+      showError('guests', 'Notre salle accueille au maximum 60 personnes.');
       valid = false;
     }
 
